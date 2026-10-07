@@ -1,0 +1,1 @@
+{"SDL3":{"version":"3.5.0","status":"provided by hashed SDK snapshot"},"DearImGui":{"version":"1.92.5","status":"provided by hashed SDK snapshot"},"controllerdb":{"upstream":"https://github.com/gabomdq/SDL_GameControllerDB","status":"planned; pin before integration"},"GekkoNet":{"status":"deferred until offline VS and deterministic save/restore"}}

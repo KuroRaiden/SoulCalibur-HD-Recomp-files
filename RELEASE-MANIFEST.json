@@ -1,0 +1,222 @@
+[
+  {
+    "path": ".gitattributes",
+    "sha256": "a79691a93b46e49ce460c26ef22afcc03d6eca1e63bf2edbc20e96159510f6c9",
+    "bytes": 15
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "fda57b8bac3be1047d392634aa61d2277b6866240da88dee27120293637e069a",
+    "bytes": 159
+  },
+  {
+    "path": "CMakeLists.txt",
+    "sha256": "483f55c50e824b2a8e29a9a3c8e12c480e8b506be7968968d907c6982c6c8d02",
+    "bytes": 2224
+  },
+  {
+    "path": "CMakePresets.json",
+    "sha256": "95eb4727474e159118ff84acbd127dac3f060fe74b17b3f35290ec2991fe160a",
+    "bytes": 5396
+  },
+  {
+    "path": "docs/architecture.md",
+    "sha256": "aff431215a29ca6ff2b9bb073d362a88b8c425e51f7c06b285510d5193183644",
+    "bytes": 2059
+  },
+  {
+    "path": "docs/dependencies.json",
+    "sha256": "3e805b511888ba8c71e316fee1329ceba51c20e4c9bd0cbdb36a45d40fad1542",
+    "bytes": 350
+  },
+  {
+    "path": "docs/milestones.md",
+    "sha256": "e6784a36cca86ab407929a9f802a8ae78ef83ee2cc49ef36b4756ebe7c6c354c",
+    "bytes": 1956
+  },
+  {
+    "path": "docs/release-legal.md",
+    "sha256": "3135c53339f36b50fc71e1d9b210cd9aa59933941a16107fda77e967a3a4c17a",
+    "bytes": 3817
+  },
+  {
+    "path": "docs/sdk-file-hashes.json",
+    "sha256": "567b3726417a6848b7f9af34986c54dcfb7ed3954ed1f2a815d96d7a9eefa842",
+    "bytes": 161869
+  },
+  {
+    "path": "docs/sdk-lock.json",
+    "sha256": "9af6afe8effa2314b978274b6ebc5a4fe6f817c13066430b06e74bbead133471",
+    "bytes": 405
+  },
+  {
+    "path": "docs/title-metadata.json",
+    "sha256": "54c87f7fe6508d2fe62a2ea553214e4a1483f3d56aeaa41b18da8dde444dcc51",
+    "bytes": 421
+  },
+  {
+    "path": "interop/audio_diagnostics.cpp",
+    "sha256": "2a50361e96fb9ebd6bb5c73643bb84804164ebf65610bd0d12fe899956fbadd9",
+    "bytes": 1183
+  },
+  {
+    "path": "interop/frame_diagnostics.cpp",
+    "sha256": "1857406e2c3009d5eceebd2228b337e9c78849a090def910a37463a3a4e62ec2",
+    "bytes": 595
+  },
+  {
+    "path": "interop/functions.toml",
+    "sha256": "ee1532eb4860706b847386f8ef5b7b488d9f8e364297b99b12511481ceb88ba8",
+    "bytes": 1673
+  },
+  {
+    "path": "interop/jpeg_diagnostics.cpp",
+    "sha256": "81813c91437b1964f48938d6b19ad287bb6a142cd3eb9b4c6aa72db4029a9a08",
+    "bytes": 1519
+  },
+  {
+    "path": "interop/local_profile.cpp",
+    "sha256": "db42e5869a4888a0aadaa5ae4888b8cdb7954669f66216d4311705f95abca541",
+    "bytes": 1109
+  },
+  {
+    "path": "interop/menu_input.cpp",
+    "sha256": "07e8ef236854f1aef9f00f76d716c972a5567e26411059a816f27a5387ab2ef8",
+    "bytes": 3049
+  },
+  {
+    "path": "interop/structures.json",
+    "sha256": "960784c06c39c0204e63a46c385ce8881391a15be52557c3fcfe8ee62df3d813",
+    "bytes": 1129
+  },
+  {
+    "path": "interop/symbols.csv",
+    "sha256": "0901ff0ce840bbab8e7729f457d99b699eea3a5ccede8a293839ad514cc59019",
+    "bytes": 7112
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "84b413aa818bc5485a4640d94cc0aa9036781f20c3949b2b0c7e991cb9b7dde1",
+    "bytes": 1532
+  },
+  {
+    "path": "licenses/dependencies/Dear-ImGui.txt",
+    "sha256": "c80c5789748d955c4a650562baa0d750494e2c7128c2ca66aaebe2e3c4e198bf",
+    "bytes": 1083
+  },
+  {
+    "path": "licenses/dependencies/fmt.txt",
+    "sha256": "07580f2a3b35709ce703d523f447b242f6dfec7582a8c0df102c7fa2849375f8",
+    "bytes": 1431
+  },
+  {
+    "path": "licenses/dependencies/ReXGlue.txt",
+    "sha256": "8e065be1da2ff9a16b1f063d4636d8b67e6a654bb90583ea4332e66ac421bb18",
+    "bytes": 1659
+  },
+  {
+    "path": "licenses/dependencies/SDL3.txt",
+    "sha256": "e36997fe492c48e7ed873065cc3a694f38e8189a328d3709099ffdc9a8843f4c",
+    "bytes": 883
+  },
+  {
+    "path": "licenses/dependencies/spdlog.txt",
+    "sha256": "d678c20826e1392578508e1c78649a1e3c31bda05ef4388d967dbd654461b140",
+    "bytes": 1323
+  },
+  {
+    "path": "licenses/dependencies/Tracy.txt",
+    "sha256": "16f7df4828bd89c880c17dd2f45e834b754b6d5e8c9a9ee886af1be4b89475ca",
+    "bytes": 1618
+  },
+  {
+    "path": "NOTICE.md",
+    "sha256": "98f9e51303b46e7f6b25aa85b4ad11d0b8c48c248dee16b9d37d523529235b77",
+    "bytes": 3309
+  },
+  {
+    "path": "README.md",
+    "sha256": "69ac62b57340bf44f34db5a176f0ef0391ed12f87e1b2274cbb1c447ed8331f3",
+    "bytes": 3161
+  },
+  {
+    "path": "runtime-defaults.toml",
+    "sha256": "70103ca58aa919f8736a4e07118ccca56b44d7d9e6b5e7a18aaa764d42a63177",
+    "bytes": 104
+  },
+  {
+    "path": "soulcalibur_hd_manifest.toml",
+    "sha256": "27078edf0855cd72bf5158635571330c0d9d1be07e8545a0d6adcf23678009a6",
+    "bytes": 287
+  },
+  {
+    "path": "src/crash_diagnostics.cpp",
+    "sha256": "26caf701ba0d4bddf3170adb0b04afe211e1203b21e3168d6d694b110b019ce2",
+    "bytes": 1903
+  },
+  {
+    "path": "src/host_math.cpp",
+    "sha256": "720e143cfde8884eb6f2c512ea1ae78fdcd4a14f039e69863f75b647e706b124",
+    "bytes": 610
+  },
+  {
+    "path": "src/keyboard_controller.h",
+    "sha256": "58c25f079f1018a0c1901b07757f3bac61e4e4263f4ad453b121e7aba8076d90",
+    "bytes": 4122
+  },
+  {
+    "path": "src/launcher_dialog.h",
+    "sha256": "1128dc9f6a6a6f1e8841ac7de3472bf8c834ff29b24dcb24e1130ddc020aa55d",
+    "bytes": 5441
+  },
+  {
+    "path": "src/main.cpp",
+    "sha256": "23c6dc121e940107ad4d57edf7a12f6ae68ae290fe26bc2da5ccc6cf32608209",
+    "bytes": 1113
+  },
+  {
+    "path": "src/menu/application_hooks.h",
+    "sha256": "940829db912b19626879c23329a43471b8c3b5f3bd1c577d80d0b565dd5a1db9",
+    "bytes": 611
+  },
+  {
+    "path": "src/render/scene_renderer.h",
+    "sha256": "115cc7907491cc6611fa169862875ec0e20b6a92358f420a8a4afe8f1a65c7e7",
+    "bytes": 473
+  },
+  {
+    "path": "src/soulcalibur_hd_app.h",
+    "sha256": "0a434efe77d3218f41bf72c5dd99562d308de94b378adc59a107476d87560869",
+    "bytes": 2725
+  },
+  {
+    "path": "tests/host_math_test.cpp",
+    "sha256": "de327bacf148fc7e1d7ac1edb7e55ee37c71ea53fd56f49ec731ec9fb143d4e0",
+    "bytes": 955
+  },
+  {
+    "path": "tests/keyboard_controller_test.cpp",
+    "sha256": "87409a518ab1b4ab5811d809258054c1daad9ce4776128f705a77d03928169ef",
+    "bytes": 1516
+  },
+  {
+    "path": "tools/build.cmd",
+    "sha256": "83fbfd9d68519df9d659c0dd2c3a6c1d074cd961bd0986f4c28eaffaac3a308b",
+    "bytes": 229
+  },
+  {
+    "path": "tools/codegen.ps1",
+    "sha256": "ec2f1ee2d17798d2b92326a09bf68536056acb21644946f78b9153742e76a6d9",
+    "bytes": 266
+  },
+  {
+    "path": "tools/play.cmd",
+    "sha256": "e343fc28c1b8624fe68e322ee74f9412ca0ff9dcaeb065dff2233dbfd3ef1a65",
+    "bytes": 181
+  },
+  {
+    "path": "tools/verify-sdk.ps1",
+    "sha256": "8c398d7710e9a6964bb69a3802897e8ef50702f98aca28f90b0a1f6695850de4",
+    "bytes": 518
+  }
+]

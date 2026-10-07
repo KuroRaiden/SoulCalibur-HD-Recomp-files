@@ -1,0 +1,37 @@
+longjmp_address = 0x821513C0
+setjmp_address = 0x82151900
+[functions]
+0x82166DC0 = { name = "GuestCrtStartup" }
+0x8211F8E8 = { name = "UnidentifiedTailTargetA" }
+0x820A8738 = { name = "UnidentifiedTailTargetB" }
+0x8212D058 = { name = "UnidentifiedTailTargetC" }
+0x820AF4C0 = { name = "UnidentifiedTailTargetD" }
+0x82089EB0 = { name = "JpegResetErrorManager", size = 24 }
+0x82288970 = { name = "GameMainAndFrameLoop" }
+0x82165850 = { name = "ReadControllerState" }
+0x8225E008 = { name = "PollAndNormalizeControllers" }
+0x8205BCD8 = { name = "D3DPresentViaVdSwap" }
+0x8206B1A0 = { name = "InitializeGraphicsEngines" }
+0x821667E8 = { name = "CreateContentContainer" }
+0x82166928 = { name = "QueryUserSigninInfo" }
+0x8226CF88 = { name = "RegisterGameXuiSceneClasses" }
+0x8226DB78 = { name = "InitializeGameXuiScenesCandidate" }
+0x8226F738 = { name = "InspectMainMenuSceneCandidate" }
+0x820892C8 = { name = "JpegReadMarkers" }
+0x820891E8 = { name = "JpegFindFirstMarker" }
+0x82089068 = { name = "JpegFindNextMarker" }
+
+0x821513C0 = { name = "GuestLongJump" }
+0x82151900 = { name = "GuestSetJump" }
+0x82072E58 = { name = "JpegErrorExit" }
+0x82072EC0 = { name = "JpegRefillMemorySource", size = 28 }
+0x82074D48 = { name = "DecodeJpegFromMemory" }
+0x821045D8 = { name = "DispatchMemberOperationNine", size = 32 }
+
+0x82165860 = { name = 'ReadMenuControllerKeystroke' }
+0x8225E980 = { name = 'ProcessSystemNotificationsAndLicense' }
+0x82165600 = { name = "QueryUserSigninState" }
+0x8226F300 = { name = "RequireSignedInMenuUser" }
+0x8226F950 = { name = "HandleFrontMenuSelection" }
+0x820A78C0 = { name = "SetAudioRenderCallback" }
+0x820A7AA8 = { name = "SubmitAudioRenderFrame" }

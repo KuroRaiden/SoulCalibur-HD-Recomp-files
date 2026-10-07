@@ -1,0 +1,6 @@
+mnk_mode = false
+license_mask = 1
+gpu_plugin = "xenos"
+input_backend = "sdl"
+[log.levels]
+gpu = "error"

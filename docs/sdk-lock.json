@@ -1,0 +1,9 @@
+{
+  "package_version": "0.9.0.1",
+  "reported_version": "0.9.0.1-dev.gcb58065",
+  "upstream": "https://github.com/rexglue/rexglue-sdk.git",
+  "source_head": "cb58065c793429aa92895d778af58d12e9d26d8f",
+  "provenance": "Local modified DOA4 SDK installation; source tree is dirty. Not a pristine upstream build.",
+  "snapshot": "thirdparty/rexglue-sdk",
+  "integrity_manifest": "docs/sdk-file-hashes.json"
+}

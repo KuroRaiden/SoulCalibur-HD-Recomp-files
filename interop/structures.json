@@ -1,0 +1,6 @@
+{
+  "structures": [
+    {"name":"GuestJpegDecompressContext","original_address":null,"purpose":"Partial JPEG decoder object layout","confidence":"high for listed offsets only","source":"IDA JPEG marker routines","notes":"Guest big-endian fields; full size/layout not asserted","fields":[{"offset":0,"name":"error_manager","type":"guest_pointer"},{"offset":24,"name":"source_manager","type":"guest_pointer"},{"offset":420,"name":"unread_marker","type":"u32"},{"offset":444,"name":"marker_reader","type":"guest_pointer"}]},
+    {"name":"GuestJpegMemorySource","original_address":null,"purpose":"JPEG input source plus local memory extension","confidence":"high for listed offsets","source":"IDA JpegRefillMemorySource and DecodeJpegFromMemory","notes":"Instances allocated dynamically; no fixed global address","fields":[{"offset":0,"name":"next_input_byte","type":"guest_pointer"},{"offset":4,"name":"bytes_in_buffer","type":"u32"},{"offset":12,"name":"fill_input_buffer","type":"guest_function_pointer"},{"offset":28,"name":"backing_buffer","type":"guest_pointer"},{"offset":32,"name":"backing_buffer_size","type":"u32"}]}
+  ]
+}

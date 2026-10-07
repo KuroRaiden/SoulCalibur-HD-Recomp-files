@@ -1,0 +1,44 @@
+original_address,readable_name,kind,purpose,confidence,source,notes
+0x82166DC0,GuestCrtStartup,function,CRT entrypoint and game main dispatch,high,XEX entrypoint and IDA disassembly,Command-line setup then GameMainAndFrameLoop
+0x82288970,GameMainAndFrameLoop,function,Game initialization and recurring frame loop,high,IDA call from CRT and backward frame-loop branch,Per-frame callees need further decomposition
+0x82165850,ReadControllerState,function,XInput-style wrapper for XamInputGetState,high,IDA three-instruction wrapper,Device context 1
+0x8225E008,PollAndNormalizeControllers,function,Poll pads and normalize analog input,high,IDA call to ReadControllerState and analog conversion,Invoked from frame loop
+0x8256C7E0,GameFlowStateIndex,global,Indexes game flow descriptor table,medium,IDA main loop scaled table indexing,State enum values not decoded
+0x8205BCD8,D3DPresentViaVdSwap,function,Reference renderer presentation boundary,medium,IDA unique VdSwap caller,Low-level boundary; not native renderer hook
+0x8206B1A0,InitializeGraphicsEngines,function,Initialize guest graphics engines,medium,IDA VdInitializeEngines caller,Not complete high-level graphics initialization
+0x821667E8,CreateContentContainer,function,Content create/open wrapper,medium,IDA XamContentCreateEx caller,Save payload layout not mapped
+0x82166928,QueryUserSigninInfo,function,Query profile sign-in information,medium,IDA XamUserGetSigninInfo caller,Profile boundary
+0x8226CF88,RegisterGameXuiSceneClasses,function,Register game UI scene classes including main menu,medium,IDA main-menu descriptor passed to repeated registration calls,Future menu hook candidate
+0x8226DB78,InitializeGameXuiScenesCandidate,function,Initialize scene class callbacks,low,IDA main-menu descriptor and callback references,Needs full call analysis
+0x8226F738,InspectMainMenuSceneCandidate,function,Check main-menu scene class,low,IDA XuiSceneMainmenu string comparison,Not yet safe to intercept
+0x82089EB0,JpegResetErrorManager,function,Reset JPEG error manager fields,high,IDA six instructions and jpeg_std_error callback construction,Indirect callback missed by static scanner
+0x8211F8E8,UnidentifiedTailTargetA,function,Unresolved tail-call target,unknown,ReXGlue validation,Discovery hint only; semantics unknown
+0x820A8738,UnidentifiedTailTargetB,function,Unresolved tail-call target,unknown,ReXGlue validation,Discovery hint only; semantics unknown
+0x8212D058,UnidentifiedTailTargetC,function,Unresolved tail-call target,unknown,ReXGlue validation,IDA function tail; semantics unknown
+0x820AF4C0,UnidentifiedTailTargetD,function,Unresolved tail-call target,unknown,ReXGlue validation,Discovery hint only; semantics unknown
+0x820892C8,JpegReadMarkers,function,JPEG marker dispatch,high,IDA marker switch table,Startup crash under investigation
+0x820891E8,JpegFindFirstMarker,function,JPEG initial marker scan,high,IDA byte parser,Diagnostic wrapper
+0x82089068,JpegFindNextMarker,function,JPEG subsequent marker scan,high,IDA byte parser,Diagnostic wrapper
+0x821513C0,GuestLongJump,function,Restore saved context and perform nonlocal return,high,IDA FP/GPR/SP restore and JPEG error handler,Configured as longjmp_address
+0x82151900,GuestSetJump,function,Save nonlocal return context,high,IDA FP/GPR context stores and JPEG decode caller,Configured as setjmp_address
+0x82072E58,JpegErrorExit,function,JPEG fatal error handler with nonlocal recovery,high,IDA calls GuestLongJump,Must not return through native call chain
+0x82072EC0,JpegRefillMemorySource,function,Refill JPEG source from memory buffer,high,IDA seven-instruction callback,Explicit boundary
+0x82074D48,DecodeJpegFromMemory,function,Decode JPEG using guarded error recovery,high,IDA installs callbacks and calls GuestSetJump,Asset path remains to be traced
+0x821045D8,DispatchMemberOperationNine,function,Delegate operation nine to member virtual method,medium,IDA eight instructions and runtime indirect call,Full UI semantics unknown
+0x82165860,ReadMenuControllerKeystroke,function,Read menu controller keystrokes including any-user requests,high,IDA XamInputGetKeystrokeEx wrapper,Local state-edge adapter compensates for pinned SDK input limitations
+0x8225E980,ProcessSystemNotificationsAndLicense,function,Process signin device and guide notifications plus license refresh,high,IDA XNotifyGetNext and XamContentGetLicenseMask calls,Tests license bit zero
+0x8256E67C,ContentLicenseMask,global,Activated XBLA content entitlement bits,high,IDA ProcessSystemNotificationsAndLicense writes through XamContentGetLicenseMask,Bit zero selects full game
+0x820C5FD8,DispatchXuiControllerKeystroke,function,Dispatch controller keystroke to the focused XUI element,high,IDA disassembly,Returns without dispatch when both per-user and ANY_USER focus are absent
+0x820C3428,LookupXuiUserFocus,function,Resolve per-user or ANY_USER XUI focus,high,IDA disassembly,Reads XuiUserFocus and XuiAnyUserFocus tables
+0x82568F50,XuiUserFocus,global,Four user-indexed XUI focus handles,high,IDA disassembly,Used to route menu events without changing gameplay controller slots
+0x82568F4C,XuiAnyUserFocus,global,ANY_USER fallback XUI focus handle,high,IDA disassembly,Checked after per-user focus lookup
+0x82165600,QueryUserSigninState,function,Query local profile sign-in state,high,IDA and SDK XamUserGetSigninState,Offline profile bridge aliases valid controller users to SDK local profile zero
+0x8226F300,RequireSignedInMenuUser,function,Gate front menu actions on a signed-in user,high,IDA disassembly,Unsigned users open the unimplemented sign-in prompt and return failure
+0x8226F950,HandleFrontMenuSelection,function,Handle Play Game and other front-menu selections,high,IDA disassembly,Play invokes RequireSignedInMenuUser then stores active controller and requests transition
+0x820A78C0,SetAudioRenderCallback,function,Register or unregister an XAudio render callback,high,IDA disassembly,Driver handle is stored at object offset 24
+0x820A7AA8,SubmitAudioRenderFrame,function,Submit mixed samples to the kernel audio render driver,high,IDA disassembly,Calls XAudioSubmitRenderDriverFrame
+0x820567C8,SetGuestViewport,function,Convert integer viewport rectangle to GPU viewport coordinates,high,IDA disassembly,Rectangle x y width height and float depth bounds
+0x822617E0,BeginGameRenderFrame,function,Bind scene render targets and viewport before game scene submission,high,IDA GameMainAndFrameLoop caller,Renderer object width and height at offsets 8 and 12
+0x82261470,CompositeAndPresentGameFrame,function,Composite scene and backdrop then present guest frame,high,IDA D3DPresentViaVdSwap caller,Backdrop texture at renderer offset 240 and scene scale at offset 268
+0x82261918,InitializeGameRenderResources,function,Create game renderer object and allocate scene render resources,high,IDA XGetVideoMode and graphics allocation calls,Internal scene dimensions initialized separately from presentation
+0x825EE7F4,GameRendererObject,global,Pointer to game renderer state,high,IDA constructor assignment and frame loop uses,Original dimensions retained pending true widescreen support

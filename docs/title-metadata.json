@@ -1,0 +1,12 @@
+{
+  "title": "SOULCALIBUR",
+  "title_id": "58410904",
+  "media_id": "5A3148F7",
+  "version": "0.0.1.2",
+  "xex_filetime_utc": "2008-06-06 17:04:52 UTC",
+  "xex_path": "SoulCalibur/default.xex",
+  "sha256": "694b6bff814912725e757b621ce52d452bc0292da59ea8b1423326a75ef0eba2",
+  "sources": ["ReXGlue loader", "IDA XEX loader", "local ArcadeInfo.xml"],
+  "xdk_version": "2.0.6995.0",
+  "asset_project_version": "1.0.438.0"
+}
